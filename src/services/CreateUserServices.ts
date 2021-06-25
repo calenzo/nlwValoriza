@@ -13,35 +13,22 @@ class CreateUserService {
 
         const usersRepository = getCustomRepository(UsersRepositories);
         
-        if(!name) {
-            return ({
-                "status": 404,
-                "message": "Name field is required!"
-            })
-        } 
-        
         if(!email) {
-            return ({
-                "status": 404,
-                "message": "Email field is required!"
-            })
+            throw new Error("Email field is required!");
         } 
 
-        const UserAlreadyExists = await usersRepository.findOne({ 
+        const userAlreadyExists = await usersRepository.findOne({ 
             email,
         })
 
-        if(UserAlreadyExists) {
-            return ({
-                "status": 404,
-                "message": "User already exists"
-            })
+        if(userAlreadyExists) {
+            throw new Error("User already exists");
         }
 
         const user = usersRepository.create({
             name,
             email,
-            admin
+            admin,
         })
 
         await usersRepository.save(user);
