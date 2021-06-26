@@ -1,25 +1,25 @@
-# NLW Valoriza
+<p align="center" >
+<img src="https://i.imgur.com/SbhNaFr.png" />
+</p>
+<h1 align="center">NLW - Valoriza</h1>
 
-## Regras
+Aqui você irá encontrar o código do NLW Valoriza desenvolvido na trilha de NodeJS durante o [NLW Together](https://nextlevelweek.com/) da incrível professora [Dani Leao](https://github.com/danileao).
 
-- Cadastro de usuário
+## 💻 Tecnologias usadas
+- [Typescript](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com)
+- [TypeORM](https://typeorm.io/)
+- [SQLite](https://www.sqlite.org/index.html)
 
-    [ x ] Não é permitido cadastrar mais de um usuário com o mesmo e-mail
+## ⚙️ Configuração
 
-    [ x ] Não é permitido cadastrar usuário sem e-mail
+Para a aplicação iniciar, você terá que configurar o banco de dados no `ormconfig.json`, se você não sabe sobre isso, dê uma olhada no [Quick Start](https://typeorm.io/#/) do TypeORM!
 
-- Cadastro de tag
+## 🚀 Como executar
 
-    [ x ] Não é permitido cadastrar mais de uma tag com o mesmo nome
+- Clone o repositório
+- Rode `yarn` para baixar as dependências
+- Rode `yarn typeorm migration:run` para criar as tabelas do banco de dados.
+- Rode o `yarn dev` para iniciar a aplicação.
 
-    [ x ] Não é permitido cadastrar a tag sem nome
-
-    [ x ] Não é permitido o cadastro por usuários que não sejam administradores
-
-- Cadastro de elogios
-
-    [ x ] Não é permitido um usuário cadastrar um elogio para sí
-
-    [ x ] Não é permitido cadastrar elogios para usuários inválidos
-
-    [ x ] O usuário precisa estar autenticado na aplicação
+Por fim, a aplicação estará disponível em `http://localhost:3000`
