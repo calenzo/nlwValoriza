@@ -3,23 +3,33 @@
 </p>
 <h1 align="center">NLW - Valoriza</h1>
 
-Aqui você irá encontrar o código do NLW Valoriza desenvolvido na trilha de NodeJS durante o [NLW Together](https://nextlevelweek.com/) da incrível professora [Dani Leao](https://github.com/danileao).
 
-## 💻 Tecnologias usadas
+"NLW Valoriza" code developed on the NodeJS track with the teacher [Dani Leao](https://github.com/danileao).
+
+## 💻 Technologies used
 - [Typescript](https://www.typescriptlang.org/)
 - [Express](https://expressjs.com)
 - [TypeORM](https://typeorm.io/)
 - [SQLite](https://www.sqlite.org/index.html)
 
-## ⚙️ Configuração
+## ⚙️ Routes
+
+- POST / GET - /users
+- POST / GET - /tags 
+- POST - /complements
+- POST - /login 
+- GET - /users/complements/receive
+- GET - /users/complements/send
+
+## ⚙️ Config
 
 Para a aplicação iniciar, você terá que configurar o banco de dados no `ormconfig.json`, se você não sabe sobre isso, dê uma olhada no [Quick Start](https://typeorm.io/#/) do TypeORM!
 
-## 🚀 Como executar
+## 🚀 How to execute
 
-- Clone o repositório
-- Rode `yarn` para baixar as dependências
-- Rode `yarn typeorm migration:run` para criar as tabelas do banco de dados.
-- Rode o `yarn dev` para iniciar a aplicação.
+- Clone repositorie
+- Run `yarn` to download dependencies
+- Run `yarn typeorm migration:run` to create tables from database
+- Run `yarn dev` to start the application
 
-Por fim, a aplicação estará disponível em `http://localhost:3000`
+Finally, the application will be available at `http: // localhost: 3000`
